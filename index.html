@@ -5,6 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="https://www.youtube.com/s/desktop/12d6b690/img/favicon.ico">
 
+		<title>calculadoranew</title>
+		<meta name="description" content="descripción de la web, se recomienda 90 caracteres">
+        <meta name="keywords" 	 content="palabras clave, separadas, por comas">
+
+        <link href="css/stylesnew.css" rel="stylesheet">
+</head>
+<body>
+    <!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="https://www.youtube.com/s/desktop/12d6b690/img/favicon.ico">
+
 		<title>calculadora</title>
 		<meta name="description" content="descripción de la web, se recomienda 90 caracteres">
         <meta name="keywords" 	 content="palabras clave, separadas, por comas">
@@ -12,33 +26,54 @@
         <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-    <div class="desktop-one-column">
-        <div class="container">
-            <div class="calculator-display">
-                <input class="calculator-display"></input>
-                <div class="calculator-keypad">
-                    <div class="keypad-numbers">
-                        <button class="keypad-button">1</button>
-                        <button class="keypad-button">2</button>
-                        <button class="keypad-button">3</button>
-                        <button class="keypad-button-blue">+</button>
-                        <button class="keypad-button">4</button>
-                        <button class="keypad-button">5</button>
-                        <button class="keypad-button">6</button>
-                        <button class="keypad-button-blue">-</button>
-                        <button class="keypad-button">7</button>
-                        <button class="keypad-button">8</button>
-                        <button class="keypad-button">9</button>
-                        <button class="keypad-button-blue">.</button>
-                        <button class="keypad-button-red">=</button>
-                        <button class="keypad-button">0</button>
-                        <button class="keypad-button-red">C</button>
-                        <button class="keypad-button-blue">%</button>
-                    </div>
-                </div>
+    <div class="mycalc">
+        <form name="calculator" id="calculator">
+            <input type="text" name="inputwindow" id="inputwindow">
+            <div>
+                <input type="button" id="one" value="1" onclick="takeValue(document.getElementById('one').value)">
+                <input type="button" id="two" value="2" onclick="takeValue(document.getElementById('two').value)">
+                <input type="button" id="three" value="3" onclick="takeValue(document.getElementById('three').value)">
+                <input type="button" id="plus" value="+" onclick="takeValue(document.getElementById('plus').value)">
             </div>
+            <div>
+                <input type="button" id="four" value="4" onclick="takeValue(document.getElementById('four').value)">
+                <input type="button" id="five" value="5" onclick="takeValue(document.getElementById('five').value)">
+                <input type="button" id="six" value="6" onclick="takeValue(document.getElementById('six').value)">
+                <input type="button" id="minus" value="-" onclick="takeValue(document.getElementById('minus').value)">
+            </div>
+            <div>
+                <input type="button" id="seven" value="7" onclick="takeValue(document.getElementById('seven').value)">
+                <input type="button" id="eight" value="8" onclick="takeValue(document.getElementById('eight').value)">
+                <input type="button" id="nine" value="9" onclick="takeValue(document.getElementById('nine').value)">
+                <input type="button" id="by" value="*" onclick="takeValue(document.getElementById('by').value)">
+            </div>
+            <div>
+                <input type="button" id="zero" value="0" onclick="takeValue(document.getElementById('zero').value)">
+                <input type="button" id="decimal" value="." onclick="takeValue(document.getElementById('decimal').value)">
+                <input type="button" id="devide" value="/" onclick="takeValue(document.getElementById('devide').value)">
+                <input type="button" id="percent" value="%" onclick="takeValue(document.getElementById('percent').value)">	
+            </div>
+            <div class="results">
+                <input type="button" id="equal" value="=" onclick="calculateResult()">
+                <button type="button" id="clear" value="" onclick="clearInput(document.getElementById('clear').value)">C</button>
+            </div>
+    
+        </form>	
         </div>
-    </div>
+    <script src="js/calculadoranew.js"></script>
+
+    </header>
+    <main>
+
+    </main>
+   
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
     <script src="js/calculadora.js"></script>
 
     </header>
@@ -53,4 +88,3 @@
 </body>
 
 </html>
- 
