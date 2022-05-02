@@ -1,10 +1,10 @@
 window.addEventListener('load', ()=> {
     const display = document.querySelector('.calculator-display');
-    const keypadButtons = document.getElementsByClassName('keypad-numbers');
+    const keypadButtons = document.getElementsByClassName('keypad-button','keypad-button-red','keypad-button-blue');
 
     const keypadButtonsArray = Array.from(keypadButtons);
 
-    keypadButtonsArray.ForEach( (button) => {
+    keypadButtonsArray.forEach( (button) => {
         button.addEventListener('click' , ()=> {
             calculadora(button, display)
         })
@@ -13,7 +13,7 @@ window.addEventListener('load', ()=> {
 
 function calculadora(button, display) {
     switch (button.innerHTML) {
-        case 'C':
+        case 'c':
             borrar(display);
             break;
         case '=':
@@ -32,5 +32,8 @@ function actualizar(display, button){
     if (display.innerHTML == 0); {
         display.innerHTML = '';
     }
-    display.innerHTML += button.innerHTML;
+    display.innerHTML = display.innerHTML + button.innerHTML;
+}
+function borrar(display) {
+    display.innerHTML = 0;
 }
