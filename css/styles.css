@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding:15px;
+    
+}
+
+.calculator{
+    display:flex;
+    flex-direction: column;
+    width: 500px;
+    border:solid 4px black;
+    
+    
+}
+.calculator-display{
+    padding:25px 15px;
+    width: 100%;
+    text-align: right;
+    border:solid 1px black;
+    background-color:black;
+}
+.calculator-display input{
+    width: 29rem;
+    height: 4rem;
+    font-size: 4rem;
+    background-color: beige;
+}
+
+.calculator-keypad{
+    display: flex;
+    width: 100%;
+    
+}
+.keypad-numbers{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.keypad-button{
+    width: 25%;
+    padding: 15px 0;
+    text-align: center;
+    cursor: pointer;
+    background-color:beige;
+    border:solid 1px grey;
+    font-size: 4rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.keypad-button.remove-last{
+    background-color:red;
+    color:whitesmoke;
+
+}
+
+.keypad-button:hover{
+    filter: brightness(80%);
+    transition: filter .25;
+}
+.keypad-button.blue{
+    background-color: blue;
+    width: 25%;
+    padding: 15px 0;
+    text-align: center;
+    cursor: pointer;
+    border:solid 1px grey;
+    filter: brightness(95%);
+    transition: filter .50;
+    color:white;  
+}
+.keypad-button.blue:hover{
+    filter: brightness(80%);
+    transition: filter .25;
+        
+}
+.keypad-button.red{
+    background-color: red;
+    width: 25%;
+    padding: 15px 0;
+    text-align: center;
+    cursor: pointer;
+    border:solid 1px grey;
+    filter: brightness(95%);
+    transition: filter .50;
+    color:white;
+
+}
+.keypad-button.red:hover{
+    filter: brightness(80%);
+    transition: filter .25;
+        
+}
