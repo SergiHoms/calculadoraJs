@@ -55,7 +55,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .keypad-button.remove-last{
-    background-color:red;
+    background-color:hsl(1, 77%, 55%);
     color:whitesmoke;
 
 }
@@ -65,7 +65,7 @@
     transition: filter .25;
 }
 .keypad-button.blue{
-    background-color: blue;
+    background-color: hsl(231, 99%, 62%);
     width: 25%;
     padding: 15px 0;
     text-align: center;
@@ -81,7 +81,7 @@
         
 }
 .keypad-button.red{
-    background-color: red;
+    background-color: hsl(1, 77%, 55%);
     width: 25%;
     padding: 15px 0;
     text-align: center;
