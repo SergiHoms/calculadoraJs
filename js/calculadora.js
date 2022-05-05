@@ -37,14 +37,38 @@ numbers.forEach( number => {
 })
 operators.forEach( operator => {
     operator.addEventListener("click", () => {
-        display.value += operator.dataset.value;
-    })
+
+        let last = display.value.charAt(display.value.length - 1);
+
+        console.log(last);
+        console.log(display.value.slice(0, -1));
+
+        if ((last == "+") || (last == "-") || (last == "%") || (last == "*") || (last == "/")) {
+
+            display.value = display.value.slice(0, -1);
+            display.value += operator.dataset.value;
+
+        } else {
+
+            display.value += operator.dataset.value;
+
+        }
+    });
 });
 
 point.addEventListener("click", () => {
-    display.value += point.dataset.value;
+    let last = display.value.charAt(display.value.length - 1);
     
+    if (last == ".") {
 
+        display.value = display.value.slice(0, -1);
+        display.value += point.dataset.value;
+
+    }else {
+
+        display.value += point.dataset.value;
+
+    }
     
 });
 
