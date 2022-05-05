@@ -22,15 +22,19 @@ let remove = document.querySelector('.remove');
 let removeLast = document.querySelector('.remove-last');
 let display = document.querySelector('.display');
 
-
 numbers.forEach( number => {
 
     number.addEventListener("click", () => {
-        display.value += number.dataset.value;
+        if (display.value == "0") {
+
+            display.value = number.dataset.value;
+        } else {
+
+            display.value += number.dataset.value;
+        }
     });
-});
-
-
+    
+})
 operators.forEach( operator => {
     operator.addEventListener("click", () => {
         display.value += operator.dataset.value;
@@ -39,6 +43,9 @@ operators.forEach( operator => {
 
 point.addEventListener("click", () => {
     display.value += point.dataset.value;
+    
+
+    
 });
 
 calculate.addEventListener("click", () => {
@@ -50,5 +57,12 @@ remove.addEventListener("click", () => {
 });
 
 removeLast.addEventListener("click", () => {
+
+    if (display.value.length > 1) {
+        display.value = display.value.slice(0,-1);
+    }
+    else {
+        display.value = "0";
+    }
 
 });
